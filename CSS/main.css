@@ -88,22 +88,39 @@
      ========================================================================== */
     
     body {
+        background-image: url(../images/bg-pattern-top-mobile.svg), url(../images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: top, bottom;
+        background-size: 100%, 100%;
         font-size: 15px;
         font-family: 'Spartan', sans-serif;
+    }
+    main {
         margin: 10px;
     }
     
+    header {
+        margin-top: 150px;
+    }
+
+    section.cards {
+        margin-bottom: 100px;
+    }
+
     h1 {
         color: hsl(300, 43%, 22%);
         font-weight: 700;
         font-size: 2.5em;
         text-align: center;
+        line-height: 1;
     }
 
     h2 {
         font-weight: 500;
         font-size: 15px;
         text-align: center;
+        color: hsl(303, 10%, 53%);
+        line-height: 2;
     }
 
     h3 {
@@ -112,6 +129,7 @@
         margin-top: 0px;
         display: inline-block;
         line-height: 1.5;
+        color: hsl(300, 24%, 96%);
     }
 
     h4 {
@@ -127,7 +145,7 @@
         padding: 15px;
         text-align: center;
         display: block;
-
+        border-radius: 10px;
     }
 
     section.rates p::before {
@@ -159,6 +177,115 @@
 
     .card p {
         clear: left;
+        color: hsl(300, 24%, 96%);
+        line-height: 2;
+    }
+
+    @media only screen and (min-width: 800px) {
+        
+        body {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+          background-repeat: no-repeat, no-repeat;
+          background-position: top left, bottom right;
+          background-size: auto, auto;
+        }
+
+        main {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin: 5rem;
+            font-size: 10px;
+            margin-bottom: 0;
+            max-width: 800px;
+        }
+         
+        header {
+            width: 45%;
+            margin-top: 0;
+        }
+
+        h1 {
+            text-align: left;
+            font-size: 2rem;
+            margin: 0;
+        }
+    
+        h2 {
+            text-align: left;
+            font-size: 0.7rem;
+        }
+
+        h3 {
+          font-size: 10px;
+          line-height: 1.2;
+        }
+    
+        h4 {
+          font-size: 9px;
+        }
+  
+        section.rates {
+            width: 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+
+        section.rates p {
+            text-align: left;
+            display: flex;
+            width: 250px;
+            padding: 10px;
+            margin: 0;
+        }
+
+        section.rates p::before {
+            display: inline-block;
+            margin-bottom: 0px;   
+            /* margin-right: 25px;   */
+            transform: scale(.6);
+        }
+
+        section.rates p:nth-child(2) {
+            align-self: center;
+        }
+
+        section.rates p:nth-child(3) {
+            align-self: flex-end;
+        }     
+
+        section.cards {
+          display: flex;
+          margin-top: 50px;
+          height: 100%;
+        }
+
+        .card {
+          margin: 10px;
+          padding: 20px;
+          height:  100%;
+        }
+
+        .card img {
+          margin: 0 20px 20px 0;
+          width: 30px;
+        }
+    
+        .card p {
+            font-size: 9px;
+        }
+
+        .card:nth-child(2) {
+          margin-top: 20px;
+        }
+
+        .card:nth-child(3) {
+          margin-top: 40px;
+        }
     }
 
   /* ==========================================================================
